@@ -1,10 +1,5 @@
-services:
-  redis:
-    image: redis
+ services:
+  tf:
+    image: jupyter/tensorflow-notebook
     ports:
-      - 6379
-    volumes:
-      - redis:/data
-
-volumes:
-  redis:
+      - 8888:8888
