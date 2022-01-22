@@ -1,5 +1,0 @@
- services:
-  tf:
-    image: jupyter/tensorflow-notebook
-    ports:
-      - 8888:8888
