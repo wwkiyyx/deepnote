@@ -1,4 +1,6 @@
-# eve online 
+# Deepnote
+
+ - https://deepnote.com/
 
  - git.ipynb : git notebook
 
