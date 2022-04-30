@@ -1,0 +1,10 @@
+services:
+  ttyd:
+    image: wwkiyyx/ttyd:ubuntu1
+    ports:
+      - 7681:7681
+  ubuntuxfce:
+    image: christian773/xfce-vnc
+    ports:
+      - 8901:5901
+      - 9901:6901
