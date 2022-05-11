@@ -1,0 +1,19 @@
+services:
+  ttyd:
+    image: wwkiyyx/ttyd:ubuntu1
+    ports:
+      - 7681:7681
+  yolo:
+    build: ./DockerFileDir/yolo
+    ports:
+      - 8080:8080
+  xiaomi-baota:
+    image: wwkiyyx/baota:ubuntu1
+    ports:
+      - 80:80
+      - 8888:8888
+  yolo-baota:
+    build: ./DockerFileDir/baota
+    ports:
+      - 80:80
+      - 8888:8888

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/opencvpro/__init__.py
+src/opencvpro/jupytercv.py
+src/opencvpro.egg-info/PKG-INFO
+src/opencvpro.egg-info/SOURCES.txt
+src/opencvpro.egg-info/dependency_links.txt
+src/opencvpro.egg-info/top_level.txt
