@@ -1,7 +1,5 @@
 # Deepnote
 
- - https://deepnote.com/
+ - https://deepnote.com
 
  - git.ipynb : git notebook
-
-
